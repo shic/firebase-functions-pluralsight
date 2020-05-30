@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
+admin.initializeApp();
+// // Start writing Firebase Functions
+// // https://firebase.google.com/docs/functions/typescript
+//
+exports.helloWorld = functions.https.onRequest((request, response) => {
+    response.send("Hello from Firebase!");
+});
+exports.getStudent = functions.https.onRequest((request, response) => {
+    admin.firestore().doc('students/etrupja').get()
+        .then(snapshot => {
+        response.send(snapshot.data());
+    })
+        .catch(error => {
+        response.status(500).send("Something went wrong!");
+    });
+});
+//# sourceMappingURL=index.js.map

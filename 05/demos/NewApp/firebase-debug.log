@@ -1,0 +1,29 @@
+[debug] [2018-11-22T18:41:21.213Z] ----------------------------------------------------------------------
+[debug] [2018-11-22T18:41:21.216Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ervis\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-11-22T18:41:21.216Z] CLI Version:   5.0.1
+[debug] [2018-11-22T18:41:21.216Z] Platform:      win32
+[debug] [2018-11-22T18:41:21.216Z] Node Version:  v8.11.3
+[debug] [2018-11-22T18:41:21.217Z] Time:          Thu Nov 22 2018 19:41:21 GMT+0100 (Central Europe Standard Time)
+[debug] [2018-11-22T18:41:21.217Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-22T18:41:21.229Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-22T18:41:21.230Z] > authorizing via signed-in user
+[debug] [2018-11-22T18:41:21.230Z] [iam] checking project test-e5764 for permissions ["firebase.projects.get"]
+[debug] [2018-11-22T18:41:21.234Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/test-e5764:testIamPermissions  
+
+[debug] [2018-11-22T18:41:22.390Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-22T18:41:22.391Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/test-e5764  
+ 
+[debug] [2018-11-22T18:41:23.412Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Ervis\Dropbox\ervis-trupja\firebase-functions-fundamentals\firebase-functions-fundamentals-m4\NewApp'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-11-22T18:41:24.397Z] Fetching environment
+[debug] [2018-11-22T18:41:24.400Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1071608067011:getServerAppConfig  
+ 
+[debug] [2018-11-22T18:41:24.887Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-22T18:41:24.888Z] Starting @google-cloud/functions-emulator
+[debug] [2018-11-22T18:41:27.417Z] Parsing function triggers
+[info] +  functions: helloWorld: http://localhost:5000/test-e5764/us-central1/helloWorld
+[info] +  functions: getStudent: http://localhost:5000/test-e5764/us-central1/getStudent

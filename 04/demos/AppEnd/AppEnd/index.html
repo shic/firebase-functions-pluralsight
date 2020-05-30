@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCm7wQfTl4SEGNBnmsvzfJZuni6QqWU6As",
+            authDomain: "staffproject-d25a7.firebaseapp.com",
+            databaseURL: "https://staffproject-d25a7.firebaseio.com",
+            projectId: "staffproject-d25a7",
+            storageBucket: "staffproject-d25a7.appspot.com",
+            messagingSenderId: "1002802485614"
+        };
+        firebase.initializeApp(config);
+        </script>
+        <script>
+            function addEmployee(){
+                var _firstName = document.getElementById("fName").value;
+                var _lastName = document.getElementById("lName").value;
+
+                var addPerson = firebase.functions().httpsCallable('addPerson');
+                addPerson({
+                    firstName: _firstName,
+                    lastName: _lastName,
+                }).then(function(result) {
+                    console.log(result);
+                }).catch(function(error){
+                    console.log(error);
+                })
+                
+
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="fName" placeholder="First Name">
+        <input type="text" id="lName" placeholder="Last Name">
+        <button onclick="addEmployee()">Add Person</button>
+    </body>
+</html>
